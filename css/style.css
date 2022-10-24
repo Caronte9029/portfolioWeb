@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --tmp-colorW-Default: #f1f4f8;
+    --tmp-colorW-T-Default: #869ab8;
+    --tmp-colorW-Nav-Default: #161c2d;
+    --tmp-colorW-Projects: #F1F4F8;
+}
+
+
+@media only screen and (min-width:992px) {
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        background: var(--tmp-colorW-Default);
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    .navbar h1 {
+        margin-left: 1.5em;
+        
+    }
+    .navbar ul{
+        display: inline-flex;
+        margin-right: 1em;
+    }
+
+    .navbar ul li{
+        list-style: none;
+        padding-top: .5em;
+    }
+
+
+    .navbar ul li a{
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--tmp-colorW-T-Default);
+        padding: .75em;
+       
+    }
+    .navbar ul li p{
+        
+        font-weight: bold;
+        color: var(--tmp-colorW-T-Default);
+        cursor: pointer;
+       
+    }
+    .hamburgerButton{
+        transition: display 3s ease;
+        display: none;
+    }
+
+    .mainLogo{
+        text-align: center;
+        font-size: 2em;
+        padding-top: 4%;
+    }
+    
+    .mainLogo img{
+        max-width: 400px;
+        
+    }
+
+    .modal{
+        position: fixed;
+        top: 130px;
+        margin-left: 34%;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 500ms ease;
+        display: none;
+        
+    }
+    .modal.modal-Active{
+        display: flow-root;
+    }
+
+    .modal-Content{
+        width: 400px;
+        height: 400px;
+        margin: auto;
+        background: white;
+        box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+        transition: all 500ms ease;
+        position: relative;
+        
+    }
+
+    .modal-Content header{
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .modal-Content label{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+         
+    }  
+    
+    .modal-Content p{
+        padding: 30px;
+    }
+    .skills{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .titleSkills{
+        padding-top: 6%;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: lighter;
+        font-size: 3em;
+    }
+   .skillContent{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 1em;
+        max-width: 1400px;
+        height: 400px;
+        align-items: center;
+        border-radius: 8px;
+        background: var(--tmp-colorW-Projects);
+       
+       
+    }
+
+     
+
+    .softskills i{
+        font-size: 5em;
+        color: var(--tmp-colorW-T-Default);
+        padding: 0px .4em 20px .8em;
+        transition-duration: 0.8s;
+        
+    }
+
+    .softskills i:hover{
+        font-size: 5.5em;
+        color: var(--tmp-colorW-Nav-Default);
+        cursor: pointer;
+        
+    }
+    .softskills p{
+        color: var(--tmp-colorW-Nav-Default);
+        font-size: 2em;
+        padding-left: 28px;
+        
+        
+        
+    }
+    .skillContent.softskills{
+        flex: 0 0 100%;
+        padding: 44px;
+        
+    }
+  
+}
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .container nav{
+        margin-left: -5%;
+    }
+    .container{
+        margin-left: 5%;
+    }
+    
+    .navbar div{
+    
+        display: flex;
+        justify-content: space-between;
+        background: var(--tmp-colorW-Default);
+    }
+    .navbar ul li p{
+        
+        display: none;
+       
+    }
+    .navbar h1{
+        margin-top: .75em;
+        margin-left: .5em;
+        height: 2em;
+    }
+    
+    .hamburgerButton{
+        font-size: 2em;
+        margin-right: .5em;
+        margin-top: .5em;
+    }
+    .navEcontainer{
+        display: none;
+        transform: translate(0,-200%);
+    }
+  
+    
+    .navEcontainer.isactive{
+        display: flow;
+        transition: transform 0.3s ease;
+        transform: translate(0,0);
+        background-color: var(--tmp-colorW-Nav-Default);
+       
+        
+    }
+
+    .navEcontainer.isactive a{
+       
+        color: var(--tmp-colorW-Default);
+        text-decoration: none;
+        font-size: 1.5em;
+        display: flow;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+ 
+
+  
+    .mainLogo{
+        position: relative;
+        font-size: 15px;
+        justify-content: center;
+        text-align: center;
+
+    }
+    .modal-Content header{
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .modal-Content label{
+        display: none;
+         
+    }  
+    .modal-Content p{
+        padding: 20px;
+    }
+    
+
+    footer{
+        background: var(--tmp-colorW-Default);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+}
